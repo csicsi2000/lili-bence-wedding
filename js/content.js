@@ -1,140 +1,140 @@
 /* ============================================================
-   EDIT THIS FILE TO CHANGE ALL TEXT ON THE WEBSITE
+   EBBEN A FÁJLBAN SZERKESZTHETŐ A WEBOLDAL ÖSSZES SZÖVEGE
    ------------------------------------------------------------
-   - Everything between quotes ("...") can be changed freely.
-   - Don't remove the commas or quotes themselves.
-   - After editing, just save and refresh the page.
+   - Minden, ami idézőjelek ("...") között van, szabadon átírható.
+   - A vesszőket és az idézőjeleket ne töröld ki!
+   - Szerkesztés után csak mentsd el, és frissítsd az oldalt.
    ============================================================ */
 
 const CONTENT = {
 
-  // ---------- HERO (top of the page) ----------
+  // ---------- FŐOLDAL TETEJE (hero) ----------
   hero: {
-    eyebrow: "We're getting married!",
+    eyebrow: "Összeházasodunk!",
     names: "Lili & Bence",
-    // Date shown to guests (free text):
-    dateText: "Saturday, 12 September 2026",
-    // Date used for the countdown — format: YYYY-MM-DDTHH:MM
+    // A vendégeknek megjelenő dátum (szabad szöveg):
+    dateText: "2026. szeptember 12., szombat",
+    // A visszaszámláláshoz használt időpont — formátum: ÉÉÉÉ-HH-NNTÓÓ:PP
     countdownDate: "2026-09-12T15:00",
-    location: "Budapest, Hungary",
-    ctaButton: "RSVP Now",
+    location: "Budapest",
+    ctaButton: "Visszajelzés",
   },
 
-  // ---------- OUR STORY ----------
+  // ---------- TÖRTÉNETÜNK ----------
   story: {
-    title: "Our Story",
-    // Each string is one paragraph. Add or remove lines as needed.
+    title: "Történetünk",
+    // Minden sor egy bekezdés. Igény szerint hozzáadható vagy törölhető.
     paragraphs: [
-      "This is a placeholder for the story of how Lili and Bence met. Replace this text with a few sentences about the couple — how they met, the proposal, or anything they'd like to share with their guests.",
-      "A second paragraph can go here, for example about the proposal or what this day means to them.",
+      "Ez egy helykitöltő szöveg Lili és Bence történetéhez. Írjátok ide pár mondatban, hogyan ismerkedtetek meg, hogyan történt a lánykérés, vagy bármit, amit szívesen megosztanátok a vendégekkel.",
+      "Ide jöhet egy második bekezdés is, például a lánykérésről, vagy arról, mit jelent számotokra ez a nap.",
     ],
   },
 
-  // ---------- DETAILS (ceremony & reception cards) ----------
+  // ---------- RÉSZLETEK (szertartás és vacsora kártyák) ----------
   details: {
-    title: "The Big Day",
+    title: "A nagy nap",
     cards: [
       {
         icon: "💒",
-        heading: "Ceremony",
-        time: "3:00 PM",
-        place: "Ceremony venue name",
-        text: "Placeholder — a short description of the ceremony, e.g. 'The ceremony will take place outdoors, weather permitting. Please arrive 20 minutes early.'",
+        heading: "Szertartás",
+        time: "15:00",
+        place: "Szertartás helyszínének neve",
+        text: "Helykitöltő — rövid leírás a szertartásról, pl. 'A szertartás jó idő esetén a szabadban lesz. Kérjük, érkezzetek 20 perccel korábban.'",
       },
       {
         icon: "🥂",
-        heading: "Reception",
-        time: "6:00 PM",
-        place: "Reception venue name",
-        text: "Placeholder — details about the dinner and party, e.g. 'Dinner, dancing and celebration until late. Dress code: semi-formal.'",
+        heading: "Vacsora és buli",
+        time: "18:00",
+        place: "Fogadás helyszínének neve",
+        text: "Helykitöltő — részletek a vacsoráról és a buliról, pl. 'Vacsora, tánc és ünneplés hajnalig. Dress code: alkalmi.'",
       },
     ],
   },
 
-  // ---------- SCHEDULE (timeline of the day) ----------
+  // ---------- PROGRAM (a nap menete) ----------
   schedule: {
-    title: "Schedule of the Day",
-    // Add or remove events as needed. Keep the { } and commas.
+    title: "A nap programja",
+    // Igény szerint hozzáadható vagy törölhető esemény. A { } jeleket és vesszőket hagyd meg!
     events: [
-      { time: "14:30", title: "Guests arrive", description: "Welcome drinks at the venue." },
-      { time: "15:00", title: "Ceremony", description: "The moment we say 'I do'." },
-      { time: "16:00", title: "Photos & cocktails", description: "Group photos and refreshments." },
-      { time: "18:00", title: "Dinner", description: "Seated dinner with toasts." },
-      { time: "20:00", title: "First dance", description: "Followed by dancing for everyone." },
-      { time: "23:00", title: "Midnight snack", description: "Placeholder — e.g. traditional midnight feast." },
+      { time: "14:30", title: "Vendégek érkezése", description: "Üdvözlőitalok a helyszínen." },
+      { time: "15:00", title: "Szertartás", description: "A pillanat, amikor kimondjuk az igent." },
+      { time: "16:00", title: "Fotózás és koccintás", description: "Csoportképek és frissítők." },
+      { time: "18:00", title: "Vacsora", description: "Ültetett vacsora pohárköszöntőkkel." },
+      { time: "20:00", title: "Nyitótánc", description: "Utána tánc mindenkinek!" },
+      { time: "23:00", title: "Menyecsketánc", description: "Helykitöltő — pl. menyecsketánc és éjféli falatok." },
     ],
   },
 
-  // ---------- VENUE ----------
+  // ---------- HELYSZÍN ----------
   venue: {
-    title: "Getting There",
-    name: "Venue Name Placeholder",
-    address: "123 Example Street, 1011 Budapest, Hungary",
-    description: "Placeholder — a sentence or two about the venue and how to get there (public transport, taxi recommendations, etc.).",
-    parking: "Parking: placeholder — e.g. 'Free parking is available on site.'",
-    // Paste a Google Maps link here (open the venue in Google Maps > Share > Copy link):
+    title: "Megközelítés",
+    name: "Helyszín neve (helykitöltő)",
+    address: "Példa utca 123., 1011 Budapest",
+    description: "Helykitöltő — egy-két mondat a helyszínről és a megközelítésről (tömegközlekedés, taxi, stb.).",
+    parking: "Parkolás: helykitöltő — pl. 'A helyszínen ingyenes parkolás áll rendelkezésre.'",
+    // Ide illesszétek be a Google Térkép linket (a helyszín a Google Térképen > Megosztás > Link másolása):
     mapLink: "https://maps.google.com",
   },
 
-  // ---------- RSVP ----------
+  // ---------- VISSZAJELZÉS (RSVP) ----------
   rsvp: {
-    title: "RSVP",
-    text: "Placeholder — e.g. 'We would be delighted to celebrate with you! Please let us know if you can make it by clicking the button below.'",
-    deadline: "Please respond by 1 August 2026.",
-    buttonText: "Respond Here",
-    // Easiest option: create a free Google Form and paste its link here.
+    title: "Visszajelzés",
+    text: "Helykitöltő — pl. 'Nagy örömmel ünnepelnénk veletek! Kérjük, jelezzétek az alábbi gombra kattintva, hogy számíthatunk-e rátok.'",
+    deadline: "Kérjük, jelezzetek vissza 2026. augusztus 1-ig!",
+    buttonText: "Visszajelzés küldése",
+    // Legegyszerűbb megoldás: készítsetek egy ingyenes Google Űrlapot, és illesszétek be a linkjét ide.
     buttonLink: "https://forms.google.com",
-    contact: "Questions? Contact us at placeholder@email.com or +36 00 000 0000.",
+    contact: "Kérdésetek van? Írjatok a helykitolto@email.com címre, vagy hívjatok: +36 00 000 0000.",
   },
 
-  // ---------- ACCOMMODATION ----------
+  // ---------- SZÁLLÁS ----------
   accommodation: {
-    title: "Where to Stay",
-    intro: "Placeholder — e.g. 'For guests travelling from afar, here are a few places we recommend near the venue.'",
+    title: "Szálláslehetőségek",
+    intro: "Helykitöltő — pl. 'A messzebbről érkező vendégeknek az alábbi szállásokat ajánljuk a helyszín közelében.'",
     places: [
       {
         icon: "🏨",
-        heading: "Hotel Placeholder One",
-        text: "Short description — distance from venue, price range, booking note.",
-        linkText: "Visit website",
+        heading: "Első szálloda (helykitöltő)",
+        text: "Rövid leírás — távolság a helyszíntől, árkategória, foglalási tudnivalók.",
+        linkText: "Weboldal megnyitása",
         link: "https://example.com",
       },
       {
         icon: "🏡",
-        heading: "Guesthouse Placeholder Two",
-        text: "Short description — distance from venue, price range, booking note.",
-        linkText: "Visit website",
+        heading: "Második vendégház (helykitöltő)",
+        text: "Rövid leírás — távolság a helyszíntől, árkategória, foglalási tudnivalók.",
+        linkText: "Weboldal megnyitása",
         link: "https://example.com",
       },
     ],
   },
 
-  // ---------- FAQ ----------
+  // ---------- GYAKORI KÉRDÉSEK ----------
   faq: {
-    title: "Frequently Asked Questions",
+    title: "Gyakori kérdések",
     items: [
       {
-        question: "What should I wear?",
-        answer: "Placeholder — e.g. 'Semi-formal / cocktail attire. The ceremony is outdoors on grass, so plan footwear accordingly.'",
+        question: "Mit vegyek fel?",
+        answer: "Helykitöltő — pl. 'Alkalmi öltözet. A szertartás füves területen, a szabadban lesz, ezt a cipőválasztásnál érdemes figyelembe venni.'",
       },
       {
-        question: "Can I bring a plus one?",
-        answer: "Placeholder — e.g. 'Please check your invitation — if your guest is included, their name will be listed.'",
+        question: "Hozhatok kísérőt?",
+        answer: "Helykitöltő — pl. 'Kérjük, nézzétek meg a meghívót — ha a kísérőd is hivatalos, az ő neve is szerepel rajta.'",
       },
       {
-        question: "Are children welcome?",
-        answer: "Placeholder — answer here.",
+        question: "Jöhetnek gyerekek?",
+        answer: "Helykitöltő — ide jön a válasz.",
       },
       {
-        question: "Do you have a gift registry?",
-        answer: "Placeholder — e.g. 'Your presence is the greatest gift! If you wish to give something, ...'",
+        question: "Mit adjunk ajándékba?",
+        answer: "Helykitöltő — pl. 'A legnagyobb ajándék számunkra, ha velünk ünnepeltek! Ha mégis szeretnétek valamivel készülni, ...'",
       },
     ],
   },
 
-  // ---------- FOOTER ----------
+  // ---------- LÁBLÉC ----------
   footer: {
     names: "Lili & Bence",
-    note: "We can't wait to celebrate with you! ✦ 12 September 2026",
+    note: "Alig várjuk, hogy együtt ünnepeljünk veletek! ✦ 2026. szeptember 12.",
   },
 };

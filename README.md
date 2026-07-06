@@ -1,46 +1,48 @@
-# Lili & Bence — Wedding Website 💍
+# Lili & Bence — Esküvői weboldal 💍
 
-A simple, responsive wedding website. No build tools, no frameworks — just HTML, CSS and JavaScript, ready for free hosting on GitHub Pages.
+Egyszerű, reszponzív esküvői weboldal. Nincs build folyamat, nincsenek keretrendszerek — csak HTML, CSS és JavaScript, ingyenes GitHub Pages tárhelyre készítve.
 
-## ✏️ How to edit the text (for the couple)
+## ✏️ Hogyan szerkeszthető a szöveg? (a párnak)
 
-**All text on the website lives in one file: [`js/content.js`](js/content.js).**
+**A weboldal összes szövege egyetlen fájlban található: [`js/content.js`](js/content.js).**
 
-1. Open `js/content.js` in any text editor (or directly on GitHub: click the file → the pencil ✏️ icon).
-2. Change any text between the quotes `"..."`. The comments in the file explain each section.
-3. Save (or on GitHub: "Commit changes"). The live site updates within a minute or two.
+1. Nyisd meg a `js/content.js` fájlt egy szövegszerkesztőben (vagy közvetlenül GitHubon: kattints a fájlra → ceruza ✏️ ikon).
+2. Írd át bármelyik szöveget az idézőjelek `"..."` között. A fájlban lévő megjegyzések minden szakaszt elmagyaráznak.
+3. Mentsd el (GitHubon: „Commit changes"). Az élő oldal egy-két percen belül frissül.
 
-You never need to touch the HTML or CSS to change text, dates, times, schedule items, FAQ entries, or links.
+A szövegek, dátumok, időpontok, programpontok, GYIK-bejegyzések és linkek módosításához soha nem kell a HTML-hez vagy CSS-hez nyúlni.
 
-Things to fill in when the details arrive:
+Kitöltendő, amint megvannak a részletek:
 
-- [ ] Names, date and location in the `hero` section
-- [ ] `countdownDate` (drives the live countdown)
-- [ ] Our Story paragraphs
-- [ ] Ceremony & reception times and venues
-- [ ] Schedule of the day
-- [ ] Venue address + Google Maps link
-- [ ] RSVP link (easiest: create a free **Google Form** and paste its link into `rsvp.buttonLink`)
-- [ ] Accommodation recommendations
-- [ ] FAQ answers
-- [ ] Photos — see below
+- [ ] Nevek, dátum és helyszín a `hero` szakaszban
+- [ ] `countdownDate` (ez vezérli az élő visszaszámlálást)
+- [ ] Történetünk bekezdései
+- [ ] Szertartás és vacsora időpontja, helyszíne
+- [ ] A nap programja
+- [ ] Helyszín címe + Google Térkép link
+- [ ] Visszajelzés link (legegyszerűbb: ingyenes **Google Űrlap**, a linkjét a `rsvp.buttonLink` mezőbe kell beilleszteni)
+- [ ] Szállásajánlások
+- [ ] GYIK válaszok
+- [ ] Fotók — lásd lent
 
-## 🖼️ Adding photos
+## 🖼️ Fotók hozzáadása
 
-Put images in an `assets/` folder, then replace the placeholder blocks in `index.html`:
+Tegyétek a képeket egy `assets/` mappába, majd cseréljétek le a helykitöltő blokkokat az `index.html`-ben:
 
 ```html
-<!-- replace this: -->
-<div class="story-photo placeholder-photo"><span>Photo of the couple</span></div>
-<!-- with this: -->
-<img class="story-photo" src="assets/couple.jpg" alt="Lili and Bence">
+<!-- ezt: -->
+<div class="story-photo placeholder-photo"><span>A pár fotója</span></div>
+<!-- erre: -->
+<img class="story-photo" src="assets/par.jpg" alt="Lili és Bence">
 ```
 
-## 🎨 Changing colors / fonts
+## 🎨 Színek és betűtípusok módosítása
 
-Edit the variables at the top of [`css/style.css`](css/style.css) (`--sage`, `--gold`, `--ivory`, ...). One change updates the whole site.
+A [`css/style.css`](css/style.css) tetején lévő változókat kell átírni (`--sage`, `--gold`, `--ivory`, ...). Egyetlen módosítás az egész oldalon érvényesül.
 
-## 🚀 Publishing on GitHub Pages (free)
+---
+
+## 🚀 Publishing on GitHub Pages (free) — for the maintainer
 
 1. Create a repository on GitHub (e.g. `lili-bence-wedding`) and push this folder to it.
 2. On GitHub: **Settings → Pages → Build and deployment**
@@ -59,8 +61,8 @@ Just open `index.html` in a browser — no server needed.
 ## Project structure
 
 ```
-index.html      — page structure (sections, placeholders)
+index.html      — page structure (sections, placeholders); static labels are in Hungarian
 css/style.css   — all styling, colors and responsive rules
-js/content.js   — ⭐ ALL editable text lives here
+js/content.js   — ⭐ ALL editable text lives here (Hungarian)
 js/main.js      — renders content.js into the page, countdown, mobile menu
 ```
