@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lili &amp; Bence — Wedding</title>
+  <meta name="description" content="Wedding of Lili and Bence — all the details in one place.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>">
+</head>
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav-brand" id="nav-brand">L &amp; B</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="nav-links">
+      <a href="#story">Our Story</a>
+      <a href="#details">Details</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#venue">Venue</a>
+      <a href="#accommodation">Stay</a>
+      <a href="#faq">FAQ</a>
+      <a href="#rsvp" class="nav-rsvp">RSVP</a>
+    </nav>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <p class="hero-eyebrow" id="hero-eyebrow"></p>
+      <h1 class="hero-names" id="hero-names"></h1>
+      <div class="hero-divider"><span>✦</span></div>
+      <p class="hero-date" id="hero-date"></p>
+      <p class="hero-location" id="hero-location"></p>
+      <div class="countdown" id="countdown" aria-label="Countdown to the wedding">
+        <div class="countdown-item"><span id="cd-days">–</span><small>Days</small></div>
+        <div class="countdown-item"><span id="cd-hours">–</span><small>Hours</small></div>
+        <div class="countdown-item"><span id="cd-mins">–</span><small>Minutes</small></div>
+        <div class="countdown-item"><span id="cd-secs">–</span><small>Seconds</small></div>
+      </div>
+      <a href="#rsvp" class="btn btn-primary" id="hero-cta"></a>
+    </div>
+    <a href="#story" class="hero-scroll" aria-label="Scroll down">▾</a>
+  </section>
+
+  <!-- ===================== OUR STORY ===================== -->
+  <section class="section" id="story">
+    <div class="container narrow">
+      <h2 class="section-title" id="story-title"></h2>
+      <div class="section-divider"><span>✦</span></div>
+      <div class="story-photo placeholder-photo">
+        <span>Photo of the couple</span>
+      </div>
+      <div class="story-text" id="story-text"></div>
+    </div>
+  </section>
+
+  <!-- ===================== DETAILS (CEREMONY / RECEPTION) ===================== -->
+  <section class="section section-alt" id="details">
+    <div class="container">
+      <h2 class="section-title" id="details-title"></h2>
+      <div class="section-divider"><span>✦</span></div>
+      <div class="cards" id="details-cards"></div>
+    </div>
+  </section>
+
+  <!-- ===================== SCHEDULE ===================== -->
+  <section class="section" id="schedule">
+    <div class="container narrow">
+      <h2 class="section-title" id="schedule-title"></h2>
+      <div class="section-divider"><span>✦</span></div>
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </section>
+
+  <!-- ===================== VENUE ===================== -->
+  <section class="section section-alt" id="venue">
+    <div class="container">
+      <h2 class="section-title" id="venue-title"></h2>
+      <div class="section-divider"><span>✦</span></div>
+      <div class="venue-grid">
+        <div class="venue-info">
+          <h3 id="venue-name"></h3>
+          <p id="venue-address"></p>
+          <p id="venue-description"></p>
+          <p id="venue-parking"></p>
+          <a id="venue-map-link" class="btn btn-outline" target="_blank" rel="noopener">Open in Google Maps</a>
+        </div>
+        <div class="venue-map placeholder-photo">
+          <span>Map / venue photo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RSVP ===================== -->
+  <section class="section rsvp" id="rsvp">
+    <div class="container narrow center">
+      <h2 class="section-title" id="rsvp-title"></h2>
+      <div class="section-divider"><span>✦</span></div>
+      <p id="rsvp-text"></p>
+      <p class="rsvp-deadline" id="rsvp-deadline"></p>
+      <a id="rsvp-button" class="btn btn-primary" target="_blank" rel="noopener"></a>
+      <p class="rsvp-contact" id="rsvp-contact"></p>
+    </div>
+  </section>
+
+  <!-- ===================== ACCOMMODATION ===================== -->
+  <section class="section section-alt" id="accommodation">
+    <div class="container">
+      <h2 class="section-title" id="accommodation-title"></h2>
+      <div class="section-divider"><span>✦</span></div>
+      <p class="section-intro" id="accommodation-intro"></p>
+      <div class="cards" id="accommodation-cards"></div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="section" id="faq">
+    <div class="container narrow">
+      <h2 class="section-title" id="faq-title"></h2>
+      <div class="section-divider"><span>✦</span></div>
+      <div class="faq-list" id="faq-list"></div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <p class="footer-names" id="footer-names"></p>
+    <p class="footer-note" id="footer-note"></p>
+  </footer>
+
+  <script src="js/content.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
