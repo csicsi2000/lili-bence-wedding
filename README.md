@@ -1,3 +1,7 @@
+# Link
+
+https://csicsi2000.github.io/lili-bence-wedding/
+
 # Lili & Bence — Esküvői weboldal 💍
 
 Egyszerű, reszponzív esküvői weboldal. Nincs build folyamat, nincsenek keretrendszerek — csak HTML, CSS és JavaScript, ingyenes GitHub Pages tárhelyre készítve.
@@ -48,7 +52,7 @@ A [`css/style.css`](css/style.css) tetején lévő változókat kell átírni (`
 2. On GitHub: **Settings → Pages → Build and deployment**
    - Source: *Deploy from a branch*
    - Branch: `main`, folder `/ (root)` → **Save**
-3. After a minute the site is live at `https://<username>.github.io/lili-bence-wedding/`.
+3. After a minute the site is live at `https://csicsi2000.github.io/lili-bence-wedding/`.
 
 Every push to `main` automatically updates the live site.
 
