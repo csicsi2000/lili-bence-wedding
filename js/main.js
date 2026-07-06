@@ -67,6 +67,7 @@
   setText("venue-description", CONTENT.venue.description);
   setText("venue-parking", CONTENT.venue.parking);
   $("venue-map-link").href = CONTENT.venue.mapLink;
+  $("venue-website-link").href = CONTENT.venue.website;
 
   // ---------- RSVP ----------
   setText("rsvp-title", CONTENT.rsvp.title);

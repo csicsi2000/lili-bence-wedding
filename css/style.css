@@ -244,7 +244,8 @@ img { max-width: 100%; display: block; }
 }
 .venue-info h3 { font-family: var(--font-serif); font-size: 1.8rem; font-weight: 500; margin-bottom: 8px; }
 .venue-info p { color: var(--ink-soft); margin-bottom: 14px; }
-.venue-info .btn { margin-top: 8px; }
+.venue-buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+.venue-buttons .btn { margin-top: 0; }
 .venue-map { aspect-ratio: 4 / 3; }
 
 /* ---------- RSVP ---------- */

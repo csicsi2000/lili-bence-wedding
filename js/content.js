@@ -39,14 +39,14 @@ const CONTENT = {
         icon: "💒",
         heading: "Szertartás",
         time: "15:00",
-        place: "Szertartás helyszínének neve",
+        place: "Hilltop Borbirtok, Neszmély",
         text: "Helykitöltő — rövid leírás a szertartásról, pl. 'A szertartás jó idő esetén a szabadban lesz. Kérjük, érkezzetek 20 perccel korábban.'",
       },
       {
         icon: "🥂",
         heading: "Vacsora és buli",
         time: "18:00",
-        place: "Fogadás helyszínének neve",
+        place: "Hilltop Borbirtok, Neszmély",
         text: "Helykitöltő — részletek a vacsoráról és a buliról, pl. 'Vacsora, tánc és ünneplés hajnalig. Dress code: alkalmi.'",
       },
     ],
@@ -70,12 +70,14 @@ const CONTENT = {
   venue: {
     title: "Megközelítés",
     name: "Hilltop Borbirtok",
-    // A pontos utca/házszám még helykitöltő — cseréljétek le, amint megvan:
-    address: "Neszmély (pontos cím hamarosan)",
-    description: "Helykitöltő — egy-két mondat a helyszínről és a megközelítésről (tömegközlekedés, taxi, stb.).",
-    parking: "Parkolás: helykitöltő — pl. 'A helyszínen ingyenes parkolás áll rendelkezésre.'",
-    // Ide illesszétek be a Google Térkép linket (a helyszín a Google Térképen > Megosztás > Link másolása):
-    mapLink: "https://maps.google.com",
+    address: "2544 Neszmély, Melegeshegy",
+    description: "A birtok a Melegeshegy tetején fekszik, lenyűgöző Duna-panorámával és 250 hektáros szőlőültetvénnyel körülvéve — igazi toszkán hangulat itthon.",
+    // Parkolásról a birtokkal érdemes egyeztetni — a lenti telefonszámon vagy e-mailben.
+    parking: "Parkolás: helykitöltő — kérdés esetén a birtok esküvői elérhetőségén tudtok érdeklődni: +36-70/944-3353.",
+    // Google Térkép keresőlink a birtok nevére — ha van pontosabb, konkrét helyre mutató linketek, itt cserélhető:
+    mapLink: "https://www.google.com/maps/search/?api=1&query=Hilltop+Borbirtok+Neszm%C3%A9ly",
+    // A birtok saját weboldala:
+    website: "https://hilltopborbirtok.hu/",
   },
 
   // ---------- VISSZAJELZÉS (RSVP) ----------
@@ -92,19 +94,19 @@ const CONTENT = {
   // ---------- SZÁLLÁS ----------
   accommodation: {
     title: "Szálláslehetőségek",
-    intro: "Helykitöltő — pl. 'A messzebbről érkező vendégeknek az alábbi szállásokat ajánljuk a helyszín közelében.'",
+    intro: "A messzebbről érkező vendégeknek jó hír, hogy magán a birtokon is lehet szállást foglalni — érdemes időben lefoglalni, mert korlátozott a szobaszám!",
     places: [
       {
-        icon: "🏨",
-        heading: "Első szálloda (helykitöltő)",
-        text: "Rövid leírás — távolság a helyszíntől, árkategória, foglalási tudnivalók.",
-        linkText: "Weboldal megnyitása",
-        link: "https://example.com",
+        icon: "🍇",
+        heading: "Szállás a Hilltop Borbirtokon",
+        text: "A birtok főépületében 4 Duna-panorámás szoba, a vendégházban további 6 szoba (köztük egy családi lakosztály) foglalható. Foglaláshoz keressétek közvetlenül a birtokot.",
+        linkText: "Foglalás / weboldal",
+        link: "https://hilltopborbirtok.hu/",
       },
       {
-        icon: "🏡",
-        heading: "Második vendégház (helykitöltő)",
-        text: "Rövid leírás — távolság a helyszíntől, árkategória, foglalási tudnivalók.",
+        icon: "🏨",
+        heading: "További szálláslehetőség (helykitöltő)",
+        text: "Ha a birtoki szobák elfogynak, ide jöhet egy közeli, alternatív szálláshely ajánlása — rövid leírással, távolsággal, árkategóriával.",
         linkText: "Weboldal megnyitása",
         link: "https://example.com",
       },
