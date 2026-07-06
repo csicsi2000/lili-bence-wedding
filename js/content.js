@@ -13,10 +13,11 @@ const CONTENT = {
     eyebrow: "Összeházasodunk!",
     names: "Lili & Bence",
     // A vendégeknek megjelenő dátum (szabad szöveg):
-    dateText: "2026. szeptember 12., szombat",
+    dateText: "2026. október 8., csütörtök",
     // A visszaszámláláshoz használt időpont — formátum: ÉÉÉÉ-HH-NNTÓÓ:PP
-    countdownDate: "2026-09-12T15:00",
-    location: "Budapest",
+    // Az óra egyelőre helykitöltő, amint megvan a pontos időpont, itt kell módosítani.
+    countdownDate: "2026-10-08T15:00",
+    location: "Neszmély",
     ctaButton: "Visszajelzés",
   },
 
@@ -68,8 +69,9 @@ const CONTENT = {
   // ---------- HELYSZÍN ----------
   venue: {
     title: "Megközelítés",
-    name: "Helyszín neve (helykitöltő)",
-    address: "Példa utca 123., 1011 Budapest",
+    name: "Hilltop Borbirtok",
+    // A pontos utca/házszám még helykitöltő — cseréljétek le, amint megvan:
+    address: "Neszmély (pontos cím hamarosan)",
     description: "Helykitöltő — egy-két mondat a helyszínről és a megközelítésről (tömegközlekedés, taxi, stb.).",
     parking: "Parkolás: helykitöltő — pl. 'A helyszínen ingyenes parkolás áll rendelkezésre.'",
     // Ide illesszétek be a Google Térkép linket (a helyszín a Google Térképen > Megosztás > Link másolása):
@@ -80,7 +82,7 @@ const CONTENT = {
   rsvp: {
     title: "Visszajelzés",
     text: "Helykitöltő — pl. 'Nagy örömmel ünnepelnénk veletek! Kérjük, jelezzétek az alábbi gombra kattintva, hogy számíthatunk-e rátok.'",
-    deadline: "Kérjük, jelezzetek vissza 2026. augusztus 1-ig!",
+    deadline: "Kérjük, jelezzetek vissza 2026. szeptember 1-ig!",
     buttonText: "Visszajelzés küldése",
     // Legegyszerűbb megoldás: készítsetek egy ingyenes Google Űrlapot, és illesszétek be a linkjét ide.
     buttonLink: "https://forms.google.com",
@@ -135,6 +137,6 @@ const CONTENT = {
   // ---------- LÁBLÉC ----------
   footer: {
     names: "Lili & Bence",
-    note: "Alig várjuk, hogy együtt ünnepeljünk veletek! ✦ 2026. szeptember 12.",
+    note: "Alig várjuk, hogy együtt ünnepeljünk veletek! ✦ 2026. október 8.",
   },
 };
