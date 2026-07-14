@@ -11,8 +11,10 @@
   // ---------- Hero ----------
   setText("hero-eyebrow", CONTENT.hero.eyebrow);
   setText("hero-names", CONTENT.hero.names);
+  setText("hero-date-stylized", CONTENT.hero.dateStylized);
   setText("hero-date", CONTENT.hero.dateText);
   setText("hero-location", CONTENT.hero.location);
+  setText("hero-invite", CONTENT.hero.inviteText);
   setText("hero-cta", CONTENT.hero.ctaButton);
 
   // ---------- Our Story ----------
@@ -62,12 +64,39 @@
 
   // ---------- Venue ----------
   setText("venue-title", CONTENT.venue.title);
-  setText("venue-name", CONTENT.venue.name);
-  setText("venue-address", CONTENT.venue.address);
-  setText("venue-description", CONTENT.venue.description);
-  setText("venue-parking", CONTENT.venue.parking);
-  $("venue-map-link").href = CONTENT.venue.mapLink;
-  $("venue-website-link").href = CONTENT.venue.website;
+  const venueCards = $("venue-cards");
+  CONTENT.venue.places.forEach((place) => {
+    const el = document.createElement("div");
+    el.className = "card venue-card";
+    el.innerHTML = `
+      <div class="card-icon"></div>
+      <h3></h3>
+      <p class="card-place"></p>
+      <p class="card-text"></p>
+      <div class="venue-buttons"></div>`;
+    el.querySelector(".card-icon").textContent = place.icon;
+    el.querySelector("h3").textContent = place.name;
+    el.querySelector(".card-place").textContent = place.address;
+    el.querySelector(".card-text").textContent = place.text || place.description;
+    const buttons = el.querySelector(".venue-buttons");
+    if (place.mapLink) {
+      const a = document.createElement("a");
+      a.className = "btn btn-outline";
+      a.target = "_blank"; a.rel = "noopener";
+      a.href = place.mapLink;
+      a.textContent = "Megnyitás térképen";
+      buttons.appendChild(a);
+    }
+    if (place.website) {
+      const a = document.createElement("a");
+      a.className = "btn btn-outline";
+      a.target = "_blank"; a.rel = "noopener";
+      a.href = place.website;
+      a.textContent = "Weboldal";
+      buttons.appendChild(a);
+    }
+    venueCards.appendChild(el);
+  });
 
   // ---------- RSVP ----------
   setText("rsvp-title", CONTENT.rsvp.title);

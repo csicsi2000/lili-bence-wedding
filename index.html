@@ -32,12 +32,25 @@
 
   <!-- ===================== HERO ===================== -->
   <section class="hero" id="top">
+    <div class="hero-stars" aria-hidden="true">
+      <span style="top:12%;left:16%">✦</span>
+      <span style="top:9%;left:47%;font-size:0.7em">✧</span>
+      <span style="top:15%;left:78%">✦</span>
+      <span style="top:32%;left:8%;font-size:0.65em">✧</span>
+      <span style="top:28%;left:90%;font-size:0.8em">✦</span>
+      <span style="top:58%;left:12%;font-size:0.75em">✦</span>
+      <span style="top:64%;left:88%;font-size:0.6em">✧</span>
+      <span style="top:82%;left:22%;font-size:0.6em">✧</span>
+      <span style="top:78%;left:74%">✦</span>
+    </div>
     <div class="hero-inner">
       <p class="hero-eyebrow" id="hero-eyebrow"></p>
       <h1 class="hero-names" id="hero-names"></h1>
       <div class="hero-divider"><span>✦</span></div>
+      <p class="hero-date-stylized" id="hero-date-stylized"></p>
       <p class="hero-date" id="hero-date"></p>
       <p class="hero-location" id="hero-location"></p>
+      <p class="hero-invite" id="hero-invite"></p>
       <div class="countdown" id="countdown" aria-label="Visszaszámlálás az esküvőig">
         <div class="countdown-item"><span id="cd-days">–</span><small>Nap</small></div>
         <div class="countdown-item"><span id="cd-hours">–</span><small>Óra</small></div>
@@ -84,21 +97,7 @@
     <div class="container">
       <h2 class="section-title" id="venue-title"></h2>
       <div class="section-divider"><span>✦</span></div>
-      <div class="venue-grid">
-        <div class="venue-info">
-          <h3 id="venue-name"></h3>
-          <p id="venue-address"></p>
-          <p id="venue-description"></p>
-          <p id="venue-parking"></p>
-          <div class="venue-buttons">
-            <a id="venue-map-link" class="btn btn-outline" target="_blank" rel="noopener">Megnyitás Google Térképen</a>
-            <a id="venue-website-link" class="btn btn-outline" target="_blank" rel="noopener">Birtok weboldala</a>
-          </div>
-        </div>
-        <div class="venue-map placeholder-photo">
-          <span>Térkép / helyszínfotó</span>
-        </div>
-      </div>
+      <div class="cards" id="venue-cards"></div>
     </div>
   </section>
 

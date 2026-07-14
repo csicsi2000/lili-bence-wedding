@@ -11,13 +11,17 @@ const CONTENT = {
   // ---------- FŐOLDAL TETEJE (hero) ----------
   hero: {
     eyebrow: "Összeházasodunk!",
-    names: "Lili & Bence",
+    names: "Lili + Bence",
+    // A meghívó stílusú, nagy dátum (év · hónap · nap):
+    dateStylized: "26 · 10 · 08",
     // A vendégeknek megjelenő dátum (szabad szöveg):
     dateText: "2026. október 8., csütörtök",
     // A visszaszámláláshoz használt időpont — formátum: ÉÉÉÉ-HH-NNTÓÓ:PP
-    // Az óra egyelőre helykitöltő, amint megvan a pontos időpont, itt kell módosítani.
     countdownDate: "2026-10-08T15:00",
-    location: "Neszmély",
+    location: "Dunaszentmiklós · Neszmély",
+    // A meghívó szövege:
+    inviteText:
+      "Szeretettel meghívunk esküvőnkre és az azt követő vacsorával egybekötött mulatságra. Ünnepeljetek velünk, legyen ez a nap közös emlék!",
     ctaButton: "Visszajelzés",
   },
 
@@ -36,48 +40,64 @@ const CONTENT = {
     title: "A nagy nap",
     cards: [
       {
-        icon: "💒",
-        heading: "Szertartás",
+        icon: "✦",
+        heading: "Templomi szertartás",
         time: "15:00",
-        place: "Hilltop Borbirtok, Neszmély",
-        text: "Helykitöltő — rövid leírás a szertartásról, pl. 'A szertartás jó idő esetén a szabadban lesz. Kérjük, érkezzetek 20 perccel korábban.'",
+        place: "Dunaszentmiklósi Szent Miklós püspök-templom · Dunaszentmiklós, Tatai u. 5-7, 2897",
+        text: "A nap a templomi szertartással kezdődik Dunaszentmiklóson. Kérjük, érkezzetek pár perccel korábban, hogy időben el tudjunk kezdeni.",
       },
       {
-        icon: "🥂",
-        heading: "Vacsora és buli",
-        time: "18:00",
-        place: "Hilltop Borbirtok, Neszmély",
-        text: "Helykitöltő — részletek a vacsoráról és a buliról, pl. 'Vacsora, tánc és ünneplés hajnalig. Dress code: alkalmi.'",
+        icon: "✦",
+        heading: "Polgári szertartás",
+        time: "17:00",
+        place: "Hilltop Borbirtok és Étterem · Neszmély, Meleges-hegy, 2544",
+        text: "A vendégvárás 16:00-tól lesz a polgári szertartás helyszínén, a Hilltop Borbirtokon. A szertartás után közös fotózás 17:30-tól.",
+      },
+      {
+        icon: "✦",
+        heading: "Vacsora és mulatság",
+        time: "18:30",
+        place: "Hilltop Borbirtok és Étterem · Neszmély, Meleges-hegy, 2544",
+        text: "Vacsorával egybekötött mulatság hajnalig — tortavágás 22:00-kor, éjféli vacsi éjfélkor.",
       },
     ],
   },
 
   // ---------- PROGRAM (a nap menete) ----------
   schedule: {
-    title: "A nap programja",
+    title: "Program",
     // Igény szerint hozzáadható vagy törölhető esemény. A { } jeleket és vesszőket hagyd meg!
     events: [
-      { time: "14:30", title: "Vendégek érkezése", description: "Üdvözlőitalok a helyszínen." },
-      { time: "15:00", title: "Szertartás", description: "A pillanat, amikor kimondjuk az igent." },
-      { time: "16:00", title: "Fotózás és koccintás", description: "Csoportképek és frissítők." },
-      { time: "18:00", title: "Vacsora", description: "Ültetett vacsora pohárköszöntőkkel." },
-      { time: "20:00", title: "Nyitótánc", description: "Utána tánc mindenkinek!" },
-      { time: "23:00", title: "Menyecsketánc", description: "Helykitöltő — pl. menyecsketánc és éjféli falatok." },
+      { time: "15:00", title: "Templomi szertartás", description: "Dunaszentmiklósi Szent Miklós püspök-templom — Dunaszentmiklós, Tatai u. 5-7, 2897" },
+      { time: "16:00", title: "Vendégvárás", description: "A polgári szertartás helyszínén — Hilltop Borbirtok és Étterem, Neszmély, Meleges-hegy, 2544" },
+      { time: "17:00", title: "Polgári szertartás", description: "A pillanat, amikor kimondjuk az igent." },
+      { time: "17:30", title: "Közös fotózás", description: "Csoportképek a birtokon." },
+      { time: "18:30", title: "Vacsora", description: "Ültetett vacsora pohárköszöntőkkel." },
+      { time: "22:00", title: "Tortavágás", description: "Édes pillanatok — utána folytatódik a tánc!" },
+      { time: "24:00", title: "Éjféli vacsi", description: "Éjféli falatok az éhes táncosoknak." },
     ],
   },
 
-  // ---------- HELYSZÍN ----------
+  // ---------- HELYSZÍNEK ----------
   venue: {
-    title: "Megközelítés",
-    name: "Hilltop Borbirtok",
-    address: "2544 Neszmély, Melegeshegy",
-    description: "A birtok a Melegeshegy tetején fekszik, lenyűgöző Duna-panorámával és 250 hektáros szőlőültetvénnyel körülvéve — igazi toszkán hangulat itthon.",
-    // Parkolásról a birtokkal érdemes egyeztetni — a lenti telefonszámon vagy e-mailben.
-    parking: "Parkolás: helykitöltő — kérdés esetén a birtok esküvői elérhetőségén tudtok érdeklődni: +36-70/944-3353.",
-    // Google Térkép keresőlink a birtok nevére — ha van pontosabb, konkrét helyre mutató linketek, itt cserélhető:
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Hilltop+Borbirtok+Neszm%C3%A9ly",
-    // A birtok saját weboldala:
-    website: "https://hilltopborbirtok.hu/",
+    title: "Helyszínek",
+    places: [
+      {
+        icon: "⛪",
+        name: "Dunaszentmiklósi Szent Miklós püspök-templom",
+        address: "2897 Dunaszentmiklós, Tatai u. 5-7",
+        description: "Itt lesz a templomi szertartás 15:00-kor. A templom Dunaszentmiklós központjában található, Neszmélytől kb. 10 percre autóval.",
+        mapLink: "https://www.google.com/maps/search/?api=1&query=Dunaszentmikl%C3%B3s+Tatai+u.+5-7",
+      },
+      {
+        icon: "🍇",
+        name: "Hilltop Borbirtok és Étterem",
+        address: "2544 Neszmély, Meleges-hegy",
+        description: "A vendégvárás, a polgári szertartás és a vacsorával egybekötött mulatság helyszíne. A birtok a Meleges-hegy tetején fekszik, lenyűgöző Duna-panorámával és 250 hektáros szőlőültetvénnyel körülvéve. Parkolással kapcsolatban a birtok esküvői elérhetőségén tudtok érdeklődni: +36-70/944-3353.",
+        mapLink: "https://www.google.com/maps/search/?api=1&query=Hilltop+Borbirtok+Neszm%C3%A9ly",
+        website: "https://hilltopborbirtok.hu/",
+      },
+    ],
   },
 
   // ---------- VISSZAJELZÉS (RSVP) ----------
