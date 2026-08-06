@@ -144,9 +144,48 @@
   CONTENT.faq.items.forEach((item) => {
     const el = document.createElement("details");
     el.className = "faq-item";
-    el.innerHTML = `<summary></summary><p></p>`;
+    el.innerHTML = `<summary></summary><div class="faq-answer"><p></p></div>`;
     el.querySelector("summary").textContent = item.question;
     el.querySelector("p").textContent = item.answer;
+
+    // Smooth open/close animation (native <details> jumps otherwise)
+    const summary = el.querySelector("summary");
+    const answer = el.querySelector(".faq-answer");
+    summary.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (answer.style.height) return; // already animating
+      // No transition (e.g. reduced motion): plain toggle, no animation to wait for
+      if (!parseFloat(getComputedStyle(answer).transitionDuration)) {
+        el.open = !el.open;
+        return;
+      }
+      // Settle via transitionend, with a timeout fallback in case the
+      // event is lost (background tab, interrupted transition, ...)
+      const settle = (after) => {
+        let settled = false;
+        const fn = () => {
+          if (settled) return;
+          settled = true;
+          if (after) after();
+          answer.style.height = "";
+        };
+        answer.addEventListener("transitionend", fn, { once: true });
+        setTimeout(fn, 350);
+      };
+      if (el.open) {
+        answer.style.height = answer.scrollHeight + "px";
+        void answer.offsetHeight; // reflow, so the transition has a start value
+        answer.style.height = "0px";
+        settle(() => { el.open = false; });
+      } else {
+        el.open = true;
+        const target = answer.scrollHeight;
+        answer.style.height = "0px";
+        void answer.offsetHeight; // reflow, so the transition has a start value
+        answer.style.height = target + "px";
+        settle();
+      }
+    });
     faqList.appendChild(el);
   });
 

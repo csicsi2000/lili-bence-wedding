@@ -316,7 +316,12 @@ img { max-width: 100%; display: block; }
   color: var(--gold); font-size: 1.4rem; transition: transform 0.2s ease;
 }
 .faq-item[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+.faq-answer { overflow: hidden; transition: height 0.3s ease; }
 .faq-item p { padding: 0 24px 20px; color: var(--ink-soft); font-size: 0.95rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  .faq-answer { transition: none; }
+}
 
 /* ---------- Footer ---------- */
 .footer {
