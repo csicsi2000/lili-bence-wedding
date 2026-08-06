@@ -50,6 +50,7 @@ img { max-width: 100%; display: block; }
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  color: var(--navy);
 }
 
 .section-divider, .hero-divider {
@@ -64,6 +65,11 @@ img { max-width: 100%; display: block; }
 .section-intro {
   text-align: center; max-width: 640px;
   margin: -24px auto 48px; color: var(--ink-soft);
+}
+
+.section-outro {
+  text-align: center; max-width: 640px;
+  margin: 48px auto 0; color: var(--ink-soft);
 }
 
 /* ---------- Buttons ---------- */
@@ -85,37 +91,40 @@ img { max-width: 100%; display: block; }
 .btn-outline:hover { background: var(--navy); color: var(--white); }
 
 /* ---------- Navigation ---------- */
+/* A fejléc kék (navy), a menüpontok vastagabb betűvel — a visszajelzés alapján. */
 .nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
   padding: 18px 32px;
+  background: var(--navy);
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
-.nav.scrolled { background: rgba(250, 247, 242, 0.95); box-shadow: 0 1px 12px rgba(61, 58, 53, 0.08); backdrop-filter: blur(8px); }
+.nav.scrolled { background: var(--navy-dark); box-shadow: 0 1px 12px rgba(23, 30, 51, 0.35); }
 
 .nav-brand {
   font-family: var(--font-serif);
   font-size: 1.5rem; font-weight: 600;
-  color: var(--ink); text-decoration: none; letter-spacing: 0.06em;
+  color: var(--gold); text-decoration: none; letter-spacing: 0.06em;
 }
 
 .nav-links { display: flex; align-items: center; gap: 28px; }
 .nav-links a {
-  color: var(--ink); text-decoration: none;
-  font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--ivory); text-decoration: none;
+  font-size: 0.85rem; font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase;
   transition: color 0.2s ease;
 }
-.nav-links a:hover { color: var(--navy); }
+.nav-links a:hover { color: var(--gold); }
 .nav-links .nav-rsvp {
-  border: 1px solid var(--navy); border-radius: 999px;
-  padding: 8px 22px; color: var(--navy);
+  border: 1px solid var(--gold); border-radius: 999px;
+  padding: 8px 22px; color: var(--gold);
 }
-.nav-links .nav-rsvp:hover { background: var(--navy); color: var(--white); }
+.nav-links .nav-rsvp:hover { background: var(--gold); color: var(--navy-dark); }
 
 .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
 .nav-toggle span {
   display: block; width: 24px; height: 2px;
-  background: var(--ink); margin: 5px 0; transition: 0.3s;
+  background: var(--ivory); margin: 5px 0; transition: 0.3s;
 }
 
 /* ---------- Hero ---------- */
@@ -240,7 +249,7 @@ img { max-width: 100%; display: block; }
 }
 .card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(61, 58, 53, 0.1); }
 .card-icon { font-size: 2rem; margin-bottom: 14px; color: var(--gold); }
-.card h3 { font-family: var(--font-serif); font-size: 1.6rem; font-weight: 500; margin-bottom: 6px; }
+.card h3 { font-family: var(--font-serif); font-size: 1.6rem; font-weight: 500; margin-bottom: 6px; color: var(--navy); }
 .card-time { font-family: var(--font-serif); font-style: italic; font-size: 1.15rem; color: var(--accent-dark); }
 .card-place { letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.85rem; color: var(--ink-soft); margin: 6px 0 14px; }
 .card-text { color: var(--ink-soft); font-size: 1rem; }
@@ -278,8 +287,15 @@ img { max-width: 100%; display: block; }
   padding: 4px 0;
 }
 .timeline-dot::before { content: "✦"; }
-.timeline-body h3 { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 500; }
+.timeline-body h3 { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 500; color: var(--navy); }
 .timeline-body p { color: var(--ink-soft); font-size: 0.95rem; }
+
+/* ---------- Accommodation ---------- */
+.acc-card { text-align: left; padding: 32px 28px; }
+.acc-card h3 { margin-bottom: 10px; }
+.acc-card .card-text { margin: 2px 0; font-size: 0.95rem; }
+.acc-card a { color: var(--navy); text-decoration: none; }
+.acc-card a:hover { text-decoration: underline; }
 
 /* ---------- Venue ---------- */
 .venue-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 20px; }
@@ -335,13 +351,13 @@ img { max-width: 100%; display: block; }
   .section { padding: 72px 0; }
 
   /* Mobile navigation */
-  .nav { padding: 14px 20px; background: rgba(250, 247, 242, 0.95); }
+  .nav { padding: 14px 20px; }
   .nav-toggle { display: block; }
   .nav-links {
     position: absolute; top: 100%; left: 0; right: 0;
     flex-direction: column; gap: 0;
-    background: var(--ivory);
-    box-shadow: 0 12px 24px rgba(61, 58, 53, 0.1);
+    background: var(--navy);
+    box-shadow: 0 12px 24px rgba(23, 30, 51, 0.3);
     max-height: 0; overflow: hidden;
     transition: max-height 0.35s ease;
   }

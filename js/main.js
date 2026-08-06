@@ -17,15 +17,6 @@
   setText("hero-invite", CONTENT.hero.inviteText);
   setText("hero-cta", CONTENT.hero.ctaButton);
 
-  // ---------- Our Story ----------
-  setText("story-title", CONTENT.story.title);
-  const storyText = $("story-text");
-  CONTENT.story.paragraphs.forEach((p) => {
-    const el = document.createElement("p");
-    el.textContent = p;
-    storyText.appendChild(el);
-  });
-
   // ---------- Details cards ----------
   setText("details-title", CONTENT.details.title);
   const detailsCards = $("details-cards");
@@ -55,10 +46,14 @@
     el.innerHTML = `
       <div class="timeline-time"></div>
       <div class="timeline-dot"></div>
-      <div class="timeline-body"><h3></h3><p></p></div>`;
+      <div class="timeline-body"><h3></h3></div>`;
     el.querySelector(".timeline-time").textContent = ev.time;
     el.querySelector("h3").textContent = ev.title;
-    el.querySelector("p").textContent = ev.description;
+    if (ev.description) {
+      const p = document.createElement("p");
+      p.textContent = ev.description;
+      el.querySelector(".timeline-body").appendChild(p);
+    }
     timeline.appendChild(el);
   });
 
@@ -110,21 +105,32 @@
   // ---------- Accommodation ----------
   setText("accommodation-title", CONTENT.accommodation.title);
   setText("accommodation-intro", CONTENT.accommodation.intro);
+  setText("accommodation-outro", CONTENT.accommodation.outro);
   const accCards = $("accommodation-cards");
   CONTENT.accommodation.places.forEach((place) => {
     const el = document.createElement("div");
-    el.className = "card";
-    el.innerHTML = `
-      <div class="card-icon"></div>
-      <h3></h3>
-      <p class="card-text"></p>
-      <a class="card-link" target="_blank" rel="noopener"></a>`;
-    el.querySelector(".card-icon").textContent = place.icon;
-    el.querySelector("h3").textContent = place.heading;
-    el.querySelector(".card-text").textContent = place.text;
-    const link = el.querySelector(".card-link");
-    link.textContent = place.linkText;
-    link.href = place.link;
+    el.className = "card acc-card";
+    const h3 = document.createElement("h3");
+    h3.textContent = place.heading;
+    el.appendChild(h3);
+    (place.lines || []).forEach((line) => {
+      const p = document.createElement("p");
+      p.className = "card-text";
+      if (line.includes("@")) {
+        const a = document.createElement("a");
+        a.href = "mailto:" + line;
+        a.textContent = line;
+        p.appendChild(a);
+      } else if (/^\+?[\d\s/-]+$/.test(line)) {
+        const a = document.createElement("a");
+        a.href = "tel:" + line.replace(/[\s/-]/g, "");
+        a.textContent = line;
+        p.appendChild(a);
+      } else {
+        p.textContent = line;
+      }
+      el.appendChild(p);
+    });
     accCards.appendChild(el);
   });
 

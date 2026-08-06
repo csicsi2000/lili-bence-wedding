@@ -11,7 +11,7 @@ const CONTENT = {
   // ---------- FŐOLDAL TETEJE (hero) ----------
   hero: {
     eyebrow: "Összeházasodunk!",
-    names: "Lili + Bence",
+    names: "Lili & Bence",
     // A meghívó stílusú, nagy dátum (év · hónap · nap):
     dateStylized: "26 · 10 · 08",
     // A vendégeknek megjelenő dátum (szabad szöveg):
@@ -25,15 +25,8 @@ const CONTENT = {
     ctaButton: "Visszajelzés",
   },
 
-  // ---------- TÖRTÉNETÜNK ----------
-  story: {
-    title: "Történetünk",
-    // Minden sor egy bekezdés. Igény szerint hozzáadható vagy törölhető.
-    paragraphs: [
-      "Ez egy helykitöltő szöveg Lili és Bence történetéhez. Írjátok ide pár mondatban, hogyan ismerkedtetek meg, hogyan történt a lánykérés, vagy bármit, amit szívesen megosztanátok a vendégekkel.",
-      "Ide jöhet egy második bekezdés is, például a lánykérésről, vagy arról, mit jelent számotokra ez a nap.",
-    ],
-  },
+  // ---------- FOTÓ SZEKCIÓ ----------
+  // (A "Történetünk" cím és szöveg kérésre lekerült — ide csak a pár fotója kerül majd.)
 
   // ---------- RÉSZLETEK (szertartás és vacsora kártyák) ----------
   details: {
@@ -41,10 +34,10 @@ const CONTENT = {
     cards: [
       {
         icon: "✦",
-        heading: "Templomi szertartás",
+        heading: "Egyházi szertartás",
         time: "15:00",
         place: "Dunaszentmiklósi Szent Miklós püspök-templom · Dunaszentmiklós, Tatai u. 5-7, 2897",
-        text: "A nap a templomi szertartással kezdődik Dunaszentmiklóson. Kérjük, érkezzetek pár perccel korábban, hogy időben el tudjunk kezdeni.",
+        text: "A nap az egyházi szertartással kezdődik Dunaszentmiklóson. Kérjük, érkezzetek legalább negyed órával korábban, hogy időben el tudjuk kezdeni.",
       },
       {
         icon: "✦",
@@ -68,13 +61,13 @@ const CONTENT = {
     title: "Program",
     // Igény szerint hozzáadható vagy törölhető esemény. A { } jeleket és vesszőket hagyd meg!
     events: [
-      { time: "15:00", title: "Templomi szertartás", description: "Dunaszentmiklósi Szent Miklós püspök-templom — Dunaszentmiklós, Tatai u. 5-7, 2897" },
-      { time: "16:00", title: "Vendégvárás", description: "A polgári szertartás helyszínén — Hilltop Borbirtok és Étterem, Neszmély, Meleges-hegy, 2544" },
-      { time: "17:00", title: "Polgári szertartás", description: "A pillanat, amikor kimondjuk az igent." },
-      { time: "17:30", title: "Közös fotózás", description: "Csoportképek a birtokon." },
-      { time: "18:30", title: "Vacsora", description: "Ültetett vacsora pohárköszöntőkkel." },
-      { time: "22:00", title: "Tortavágás", description: "Édes pillanatok — utána folytatódik a tánc!" },
-      { time: "24:00", title: "Éjféli vacsi", description: "Éjféli falatok az éhes táncosoknak." },
+      { time: "15:00", title: "Egyházi szertartás" },
+      { time: "16:00", title: "Vendégvárás" },
+      { time: "17:00", title: "Polgári szertartás" },
+      { time: "17:30", title: "Közös fotózás" },
+      { time: "18:30", title: "Vacsora" },
+      { time: "22:00", title: "Tortavágás" },
+      { time: "24:00", title: "Éjféli vacsi" },
     ],
   },
 
@@ -86,14 +79,14 @@ const CONTENT = {
         icon: "⛪",
         name: "Dunaszentmiklósi Szent Miklós püspök-templom",
         address: "2897 Dunaszentmiklós, Tatai u. 5-7",
-        description: "Itt lesz a templomi szertartás 15:00-kor. A templom Dunaszentmiklós központjában található, Neszmélytől kb. 10 percre autóval.",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Dunaszentmikl%C3%B3s+Tatai+u.+5-7",
+        description: "Itt lesz az egyházi szertartás 15:00-kor. A templom Dunaszentmiklós központjában található, Neszmélytől kb. 10 percre autóval.",
+        mapLink: "https://www.google.com/maps/search/?api=1&query=Dunaszentmikl%C3%B3si+Szent+Mikl%C3%B3s+p%C3%BCsp%C3%B6k-templom",
       },
       {
         icon: "🍇",
         name: "Hilltop Borbirtok és Étterem",
         address: "2544 Neszmély, Meleges-hegy",
-        description: "A vendégvárás, a polgári szertartás és a vacsorával egybekötött mulatság helyszíne. A birtok a Meleges-hegy tetején fekszik, lenyűgöző Duna-panorámával és 250 hektáros szőlőültetvénnyel körülvéve. Parkolással kapcsolatban a birtok esküvői elérhetőségén tudtok érdeklődni: +36-70/944-3353.",
+        description: "A vendégvárás, a polgári szertartás és a vacsorával egybekötött mulatság helyszíne. A birtok a Meleges-hegy tetején fekszik, lenyűgöző Duna-panorámával és 250 hektáros szőlőültetvénnyel körülvéve. Parkolási lehetőség van a helyszínen, kérdés esetén keressetek minket.",
         mapLink: "https://www.google.com/maps/search/?api=1&query=Hilltop+Borbirtok+Neszm%C3%A9ly",
         website: "https://hilltopborbirtok.hu/",
       },
@@ -103,34 +96,79 @@ const CONTENT = {
   // ---------- VISSZAJELZÉS (RSVP) ----------
   rsvp: {
     title: "Visszajelzés",
-    text: "Helykitöltő — pl. 'Nagy örömmel ünnepelnénk veletek! Kérjük, jelezzétek az alábbi gombra kattintva, hogy számíthatunk-e rátok.'",
-    deadline: "Kérjük, jelezzetek vissza 2026. szeptember 1-ig!",
+    text: "Nagy örömmel ünnepelnénk veletek! Kérünk titeket, minél hamarabb jelezzetek vissza, hogy számíthatunk-e rátok a nagy napon, ha még nem tettétek! Ezt megtehetitek az alábbi gombra kattintva, vagy bármelyik elérhetőségünkön, akár személyesen is.",
+    deadline: "Kérjük, jelezzetek vissza legkésőbb szeptember 1-ig!",
     buttonText: "Visszajelzés küldése",
     // Legegyszerűbb megoldás: készítsetek egy ingyenes Google Űrlapot, és illesszétek be a linkjét ide.
     buttonLink: "https://forms.google.com",
-    contact: "Kérdésetek van? Írjatok a helykitolto@email.com címre, vagy hívjatok: +36 00 000 0000.",
+    contact: "Kérdésetek van? Írjatok a lilibence17@gmail.com címre vagy hívjatok: +36 70 430 6604 (Menyasszony); +36 20 293 6712 (Vőlegény)",
   },
 
   // ---------- SZÁLLÁS ----------
   accommodation: {
     title: "Szálláslehetőségek",
-    intro: "A messzebbről érkező vendégeknek jó hír, hogy magán a birtokon is lehet szállást foglalni — érdemes időben lefoglalni, mert korlátozott a szobaszám!",
+    intro: "A ceremónia helyszínén a szobák száma nagyon kevés, így a férőhelyek is korlátozottak, és ott aludni sajnos nincs lehetőség. Akinek mégis lenne szüksége szállásra, annak az alábbi, a helyszín által ajánlott lehetőségeket javasoljuk:",
+    // Minden szálláshoz: név + tetszőleges számú sor. E-mail címből és telefonszámból
+    // automatikusan kattintható link lesz.
     places: [
       {
-        icon: "🍇",
-        heading: "Szállás a Hilltop Borbirtokon",
-        text: "A birtok főépületében 4 Duna-panorámás szoba, a vendégházban további 6 szoba (köztük egy családi lakosztály) foglalható. Foglaláshoz keressétek közvetlenül a birtokot.",
-        linkText: "Foglalás / weboldal",
-        link: "https://hilltopborbirtok.hu/",
+        heading: "Duna Residence",
+        lines: [
+          "2 km-re a Birtoktól · Dunaszentmiklós",
+          "85 férőhely, 4-6 fős apartmanok",
+          "schmidt.szabolcs@dunaresidence.hu",
+          "+36 20 510 9291",
+        ],
       },
       {
-        icon: "🏨",
-        heading: "További szálláslehetőség (helykitöltő)",
-        text: "Ha a birtoki szobák elfogynak, ide jöhet egy közeli, alternatív szálláshely ajánlása — rövid leírással, távolsággal, árkategóriával.",
-        linkText: "Weboldal megnyitása",
-        link: "https://example.com",
+        heading: "Rózsa Panzió",
+        lines: [
+          "2 km-re a Birtoktól · Dunaszentmiklós",
+          "11 férőhely, 2-3 fős szobák",
+          "rozsapanzio.dmiklos@gmail.com",
+          "+36 20 560 7390",
+        ],
+      },
+      {
+        heading: "Bike Stop Duna",
+        lines: [
+          "2 km-re a Birtoktól · Dunaszentmiklós",
+          "12 férőhely, 2-3 fős szobák",
+          "bikestopduna@gmail.com",
+          "+36 20 975 3667",
+        ],
+      },
+      {
+        heading: "Duna Residence Prémium",
+        lines: [
+          "Magánszemély által üzemeltetett",
+          "2 km-re a Birtoktól · Dunaszentmiklós",
+          "14 férőhely, 4-6 fős prémium apartmanok",
+          "4cchomes@gmail.com",
+          "+36 30 915 4019",
+        ],
+      },
+      {
+        heading: "Anemona Vendégháza",
+        lines: [
+          "6 km-re a Birtoktól · Dunaalmás",
+          "15 férőhely, 2-3 fős szobák",
+          "tar.szi@gmail.com",
+          "+36 20 378 3700",
+        ],
+      },
+      {
+        heading: "Duci Udvar II Vendégház",
+        lines: [
+          "7 km-re a Birtoktól · Süttő",
+          "16 férőhely, 2-3 fős szobák",
+          "mannszisza@gmail.com",
+          "+36 20 414 6967",
+        ],
       },
     ],
+    outro:
+      "Igény esetén szívesen segítünk a szállás lefoglalásában. Az ajánlott szálláshelyek és a polgári ceremónia helyszíne között lesz lehetőség transzferjárat igénylésére is. Kérjük, amennyiben úgy látjátok, szükségetek lesz rá, jelezzétek felénk minél hamarabb, hogy le tudjuk foglalni.",
   },
 
   // ---------- GYAKORI KÉRDÉSEK ----------
@@ -139,19 +177,19 @@ const CONTENT = {
     items: [
       {
         question: "Mit vegyek fel?",
-        answer: "Helykitöltő — pl. 'Alkalmi öltözet. A szertartás füves területen, a szabadban lesz, ezt a cipőválasztásnál érdemes figyelembe venni.'",
+        answer: "Öltözzetek csinosan, de kényelmesen — a lényeg, hogy jól érezzétek magatokat! Tematika nincs, de kérlek vegyétek figyelembe, hogy a polgári ceremónia kültéren lesz, füves területen, ezt a cipőválasztásnál érdemes figyelembe venni. A bézs öltönyt és a fehér színt kérjük hagyjátok meg nekünk.",
       },
       {
         question: "Hozhatok kísérőt?",
-        answer: "Helykitöltő — pl. 'Kérjük, nézzétek meg a meghívót — ha a kísérőd is hivatalos, az ő neve is szerepel rajta.'",
-      },
-      {
-        question: "Jöhetnek gyerekek?",
-        answer: "Helykitöltő — ide jön a válasz.",
+        answer: "Kérjük, nézzétek meg a meghívót — ha a kísérőd is hivatalos, az ő neve is szerepel rajta.",
       },
       {
         question: "Mit adjunk ajándékba?",
-        answer: "Helykitöltő — pl. 'A legnagyobb ajándék számunkra, ha velünk ünnepeltek! Ha mégis szeretnétek valamivel készülni, ...'",
+        answer: "A legnagyobb ajándék számunkra, ha velünk ünnepeltek! Ha mégis szeretnétek valamivel készülni, akkor bármilyen tárgyi vagy boríték formájú ajándéknak szívesen örülünk, amivel a közös jövőnk és otthonunk megalapozását tudjátok támogatni.",
+      },
+      {
+        question: "Ha speciális étrendem van?",
+        answer: "Kérünk benneteket, hogy ha bármilyen ételérzékenységetek vagy speciális diétátok van, azt mihamarabb jelezzétek felénk, hogy időben leadhassuk a pontos létszámot a helyszínnek, és ők is maximálisan fel tudjanak készülni a fogadásotokra.",
       },
     ],
   },
