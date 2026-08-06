@@ -218,21 +218,6 @@ img { max-width: 100%; display: block; }
 }
 @keyframes bob { 0%, 100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, 8px); } }
 
-/* ---------- Placeholder photos ---------- */
-.placeholder-photo {
-  background: repeating-linear-gradient(45deg, var(--ivory-dark), var(--ivory-dark) 12px, #e9e2d5 12px, #e9e2d5 24px);
-  border: 1px dashed var(--gold);
-  border-radius: 6px;
-  display: flex; align-items: center; justify-content: center;
-  color: var(--ink-soft);
-  font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase;
-  min-height: 300px;
-}
-
-/* ---------- Our Story ---------- */
-.story-photo { margin-bottom: 40px; aspect-ratio: 16 / 9; }
-.story-text p { margin-bottom: 20px; text-align: center; font-size: 1.05rem; color: var(--ink-soft); }
-
 /* ---------- Cards (details & accommodation) ---------- */
 .cards {
   display: grid;
@@ -340,8 +325,7 @@ img { max-width: 100%; display: block; }
   text-align: center;
   padding: 56px 24px;
 }
-.footer-names { color: var(--gold); }
-.footer-names { font-family: var(--font-serif); font-size: 1.8rem; font-weight: 500; }
+.footer-names { font-family: var(--font-serif); font-size: 1.8rem; font-weight: 500; color: var(--gold); }
 .footer-note { color: rgba(250, 247, 242, 0.65); font-size: 0.85rem; margin-top: 8px; letter-spacing: 0.06em; }
 
 /* ============================================================
@@ -371,6 +355,5 @@ img { max-width: 100%; display: block; }
   .timeline::before { left: 76px; }
   .timeline-item { grid-template-columns: 56px 40px 1fr; }
   .timeline-time { font-size: 1.05rem; }
-  .placeholder-photo { min-height: 200px; }
   .card { padding: 32px 24px; }
 }

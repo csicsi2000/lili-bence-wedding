@@ -99,8 +99,12 @@
   setText("rsvp-deadline", CONTENT.rsvp.deadline);
   setText("rsvp-contact", CONTENT.rsvp.contact);
   const rsvpBtn = $("rsvp-button");
-  rsvpBtn.textContent = CONTENT.rsvp.buttonText;
-  rsvpBtn.href = CONTENT.rsvp.buttonLink;
+  if (CONTENT.rsvp.buttonLink) {
+    rsvpBtn.textContent = CONTENT.rsvp.buttonText;
+    rsvpBtn.href = CONTENT.rsvp.buttonLink;
+  } else {
+    rsvpBtn.remove();
+  }
 
   // ---------- Accommodation ----------
   setText("accommodation-title", CONTENT.accommodation.title);

@@ -25,9 +25,6 @@ const CONTENT = {
     ctaButton: "Visszajelzés",
   },
 
-  // ---------- FOTÓ SZEKCIÓ ----------
-  // (A "Történetünk" cím és szöveg kérésre lekerült — ide csak a pár fotója kerül majd.)
-
   // ---------- RÉSZLETEK (szertartás és vacsora kártyák) ----------
   details: {
     title: "A nagy nap",
@@ -96,11 +93,12 @@ const CONTENT = {
   // ---------- VISSZAJELZÉS (RSVP) ----------
   rsvp: {
     title: "Visszajelzés",
-    text: "Nagy örömmel ünnepelnénk veletek! Kérünk titeket, minél hamarabb jelezzetek vissza, hogy számíthatunk-e rátok a nagy napon, ha még nem tettétek! Ezt megtehetitek az alábbi gombra kattintva, vagy bármelyik elérhetőségünkön, akár személyesen is.",
+    text: "Nagy örömmel ünnepelnénk veletek! Kérünk titeket, minél hamarabb jelezzetek vissza, hogy számíthatunk-e rátok a nagy napon, ha még nem tettétek! Ezt megtehetitek bármelyik elérhetőségünkön, akár személyesen is.",
     deadline: "Kérjük, jelezzetek vissza legkésőbb szeptember 1-ig!",
     buttonText: "Visszajelzés küldése",
-    // Legegyszerűbb megoldás: készítsetek egy ingyenes Google Űrlapot, és illesszétek be a linkjét ide.
-    buttonLink: "https://forms.google.com",
+    // Ha lesz visszajelző űrlap (pl. Google Űrlap), illesszétek be a linkjét ide,
+    // és a gomb automatikusan megjelenik. Amíg üres (""), a gomb nem látszik.
+    buttonLink: "",
     contact: "Kérdésetek van? Írjatok a lilibence17@gmail.com címre vagy hívjatok: +36 70 430 6604 (Menyasszony); +36 20 293 6712 (Vőlegény)",
   },
 
