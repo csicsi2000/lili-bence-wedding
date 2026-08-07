@@ -98,7 +98,7 @@ const CONTENT = {
     buttonText: "Visszajelzés küldése",
     // Ha lesz visszajelző űrlap (pl. Google Űrlap), illesszétek be a linkjét ide,
     // és a gomb automatikusan megjelenik. Amíg üres (""), a gomb nem látszik.
-    buttonLink: "",
+    buttonLink: "https://forms.gle/Uj6iFSxfKSBkFJst8",
     contact: "Kérdésetek van? Írjatok a lilibence17@gmail.com címre vagy hívjatok: +36 70 430 6604 (Menyasszony); +36 20 293 6712 (Vőlegény)",
   },
 

@@ -33,6 +33,9 @@ body {
   line-height: 1.7;
 }
 
+/* Egy-egy túl hosszú szó (pl. hosszú cím) ne tolhassa szét az oldalt mobilon */
+html, body { overflow-x: hidden; overflow-x: clip; }
+
 img { max-width: 100%; display: block; }
 
 /* ---------- Layout helpers ---------- */
@@ -51,6 +54,7 @@ img { max-width: 100%; display: block; }
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--navy);
+  overflow-wrap: break-word;
 }
 
 .section-divider, .hero-divider {
@@ -356,6 +360,8 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 540px) {
+  /* Kisebb címek, hogy a leghosszabb szó ("Szálláslehetőségek") is kiférjen */
+  .section-title { font-size: clamp(1.5rem, 6.5vw, 1.9rem); letter-spacing: 0.06em; }
   .hero-stars span { font-size: 1rem; }
   .timeline::before { left: 76px; }
   .timeline-item { grid-template-columns: 56px 40px 1fr; }
