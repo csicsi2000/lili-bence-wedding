@@ -97,7 +97,22 @@
   setText("rsvp-title", CONTENT.rsvp.title);
   setText("rsvp-text", CONTENT.rsvp.text);
   setText("rsvp-deadline", CONTENT.rsvp.deadline);
-  setText("rsvp-contact", CONTENT.rsvp.contact);
+  // Contact line: make e-mail addresses and phone numbers tappable links
+  const contactEl = $("rsvp-contact");
+  if (contactEl && CONTENT.rsvp.contact) {
+    const text = CONTENT.rsvp.contact;
+    const pattern = /([\w.+-]+@[\w-]+(?:\.[\w-]+)+)|(\+\d[\d\s]*\d)/g;
+    let last = 0, m;
+    while ((m = pattern.exec(text))) {
+      contactEl.appendChild(document.createTextNode(text.slice(last, m.index)));
+      const a = document.createElement("a");
+      a.href = m[1] ? "mailto:" + m[1] : "tel:" + m[2].replace(/\s/g, "");
+      a.textContent = m[0];
+      contactEl.appendChild(a);
+      last = m.index + m[0].length;
+    }
+    contactEl.appendChild(document.createTextNode(text.slice(last)));
+  }
   const rsvpBtn = $("rsvp-button");
   if (CONTENT.rsvp.buttonLink) {
     rsvpBtn.textContent = CONTENT.rsvp.buttonText;
@@ -214,20 +229,23 @@
   // ---------- Mobile navigation ----------
   const navToggle = $("nav-toggle");
   const navLinks = $("nav-links");
-  navToggle.addEventListener("click", () => {
-    const open = navLinks.classList.toggle("open");
+  const setMenuState = (open) => {
     navToggle.setAttribute("aria-expanded", String(open));
+    navToggle.setAttribute("aria-label", open ? "Menü bezárása" : "Menü megnyitása");
+  };
+  navToggle.addEventListener("click", () => {
+    setMenuState(navLinks.classList.toggle("open"));
   });
   navLinks.querySelectorAll("a").forEach((a) =>
     a.addEventListener("click", () => {
       navLinks.classList.remove("open");
-      navToggle.setAttribute("aria-expanded", "false");
+      setMenuState(false);
     })
   );
 
   // ---------- Solid nav background after scrolling past hero ----------
   const nav = $("nav");
-  window.addEventListener("scroll", () => {
-    nav.classList.toggle("scrolled", window.scrollY > 40);
-  }, { passive: true });
+  const updateNav = () => nav.classList.toggle("scrolled", window.scrollY > 40);
+  window.addEventListener("scroll", updateNav, { passive: true });
+  updateNav(); // correct state when the page loads already scrolled
 })();

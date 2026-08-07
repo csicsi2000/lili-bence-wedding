@@ -23,7 +23,8 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+/* A scroll-padding miatt a menüből linkelt szekciók nem csúsznak a rögzített fejléc alá */
+html { scroll-behavior: smooth; scroll-padding-top: 86px; }
 
 body {
   font-family: var(--font-sans);
@@ -295,6 +296,8 @@ img { max-width: 100%; display: block; }
 .rsvp-deadline { font-family: var(--font-serif); font-style: italic; font-size: 1.15rem; color: var(--ink) !important; }
 .rsvp .btn { margin: 20px 0 24px; }
 .rsvp-contact { font-size: 0.9rem; }
+.rsvp-contact a { color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--gold); white-space: nowrap; }
+.rsvp-contact a:hover { color: var(--accent-dark); }
 
 /* ---------- FAQ ---------- */
 .faq-item {
@@ -324,6 +327,9 @@ img { max-width: 100%; display: block; }
 .faq-item p { padding: 0 24px 20px; color: var(--ink-soft); font-size: 0.95rem; }
 
 @media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero-stars span, .hero-scroll { animation: none; }
+  .card, .card:hover, .btn, .btn-primary:hover { transition: none; transform: none; }
   .faq-answer { transition: none; }
 }
 
